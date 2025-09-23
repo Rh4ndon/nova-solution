@@ -378,6 +378,112 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .footer .book-column {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            padding: 1.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .footer .book-column h5 {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .footer .book-column .btn-outline-light {
+            color: #fff;
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .footer .book-column .btn-outline-light:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: #fff;
+        }
+
+        .footer .book-column .text-white-50 {
+            color: rgba(255,255,255,0.6) !important;
+        }
+
+        .footer h5 {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color) !important;
+            transition: color 0.3s ease;
+        }
+
+        .footer .btn-primary {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 76, 235, 0.4);
+        }
+
+        /* Sam San Miguel Image Styling */
+        .sam-image {
+            width: 150px;
+            height: 180px;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sam-image:hover {
+            transform: scale(1.05);
+        }
+
+        .sam-image-container {
+            display: inline-block;
+        }
+
+        /* Footer Responsive Adjustments */
+        @media (max-width: 768px) {
+            .sam-image {
+                width: 120px;
+                height: 150px;
+            }
+            
+            .footer .text-center {
+                text-align: center !important;
+            }
+        }
+        /* Footer Button Styling */
+        .footer .btn-outline-light {
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer .btn-outline-light:hover {
+            background: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+
+        /* Footer Responsive Adjustments */
+        @media (max-width: 768px) {
+            .sam-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .footer .text-center {
+                text-align: center !important;
+            }
+        }
+
+
+       
     </style>
 </head>
 <body>
@@ -618,7 +724,9 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+
+
+       <!-- Team Section -->
     <section id="team" class="py-5">
         <div class="container">
             <div class="row mb-5">
@@ -629,7 +737,20 @@
             </div>
             
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8" data-aos="zoom-in">
+                <!-- CEO Photo -->
+                <div class="col-lg-6 col-md-6 mb-5" data-aos="fade-right">
+                    <div class="team-image-container text-center">
+                        <img src="images/ceo.jpg" alt="Sam San Miguel - CEO/Co-Founder" class="team-image img-fluid rounded-4 shadow-lg">
+                        <div class="team-overlay">
+                            <h4 class="text-white mb-2">Sam San Miguel</h4>
+                            <p class="mb-2"><strong>CEO / Co-Founder</strong></p>
+                            <p class="text-white-50 small">Leading Nova Virtual Solutions with a vision to bridge global talent with businesses seeking growth through dedicated virtual assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Photo -->
+                <div class="col-lg-6 col-md-6 mb-5" data-aos="fade-left">
                     <div class="team-image-container text-center">
                         <img src="images/team.jpg" alt="Nova Virtual Solutions Team" class="team-image img-fluid rounded-4 shadow-lg">
                         <div class="team-overlay">
@@ -683,18 +804,51 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+        <!-- CTA Section -->
     <section id="contact" class="cta-section">
         <div class="container text-center" style="position: relative; z-index: 2;">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h2 class="display-4 fw-bold mb-4" data-aos="fade-up">Let's Get Started!</h2>
                     <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Ready to reclaim your time and focus on what truly matters? Partner with us and experience the freedom of having a dedicated virtual assistant team.</p>
-                    <div class="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="200">
+                    
+                    <!-- Contact Information -->
+                    <div class="contact-info mb-4" data-aos="fade-up" data-aos-delay="150">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-phone me-3 fs-5"></i>
+                                    <span class="fs-5">+63977-674-0825</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-envelope me-3 fs-5"></i>
+                                    <span class="fs-5">info@novadgsolutions.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="social-links mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="https://www.linkedin.com/company/novadgsolutions/" target="_blank" class="btn btn-outline-light btn-sm mx-1">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn
+                        </a>
+                        <a href="https://web.facebook.com/novavirtualsolutions" target="_blank" class="btn btn-outline-light btn-sm mx-1">
+                            <i class="fab fa-facebook me-2"></i>Facebook
+                        </a>
+                        <a href="https://calendly.com/samsanmig18/30min" target="_blank" class="btn btn-outline-light btn-sm mx-1">
+                            <i class="fas fa-calendar me-2"></i>Book a Call
+                        </a>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="250">
                         <a href="mailto:info@novadgsolutions.com" class="btn btn-primary btn-lg">
                             <i class="fas fa-envelope me-2"></i>Get in Touch
                         </a>
-                        <a href="tel:+639-123-4567" class="btn btn-outline-light btn-lg">
+                        <a href="tel:+63977-674-0825" class="btn btn-outline-light btn-lg">
                             <i class="fas fa-phone me-2"></i>Call Us Now
                         </a>
                     </div>
@@ -704,14 +858,57 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer text-center">
+    <footer class="footer bg-dark text-light py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h5 class="mt-1 mb-0">
-                        <img src="images/favicon.ico" alt="Nova Virtual Solutions Logo" class="logo" height="25"> Nova Virtual Solutions
-                    </h5>
-                    <p class="mb-0">&copy; 2025 Nova Virtual Solutions. All rights reserved.</p>
+                <!-- Company Info -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/favicon.ico" alt="Nova Virtual Solutions Logo" class="logo me-2" height="30">
+                        <h4 class="mb-0">Nova Virtual Solutions</h4>
+                    </div>
+                    <p class="mb-3">Book Your Discovery Call: Discover how our tailored virtual assistant services can streamline your business operations. From admin tasks to customer support, we help you reclaim time and focus on growth. Book a consultation today and find the perfect remote talent for your needs.</p>
+                </div>
+
+            
+                
+                <!-- Contact Info -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">CONTACT</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+63977-674-0825" class="text-light text-decoration-none">+63977-674-0825</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:info@novadgsolutions.com" class="text-light text-decoration-none">info@novadgsolutions.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="mb-3">FOLLOW US</h5>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="https://www.linkedin.com/company/novadgsolutions/" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://web.facebook.com/novavirtualsolutions" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://calendly.com/samsanmig18/30min" target="_blank" class="text-light fs-4">
+                            <i class="fas fa-calendar"></i>
+                        </a>
+                    </div>
+                    <p class="small">Stay connected with us for updates and insights.</p>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="row mt-4 pt-3 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nova Virtual Solutions. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
