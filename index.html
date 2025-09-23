@@ -378,6 +378,54 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .footer .book-column {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            padding: 1.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .footer .book-column h5 {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .footer .book-column .btn-outline-light {
+            color: #fff;
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .footer .book-column .btn-outline-light:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: #fff;
+        }
+
+        .footer .book-column .text-white-50 {
+            color: rgba(255,255,255,0.6) !important;
+        }
+
+        .footer h5 {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color) !important;
+            transition: color 0.3s ease;
+        }
+
+        .footer .btn-primary {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 76, 235, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -717,7 +765,7 @@
                         <a href="https://web.facebook.com/novavirtualsolutions" target="_blank" class="btn btn-outline-light btn-sm mx-1">
                             <i class="fab fa-facebook me-2"></i>Facebook
                         </a>
-                        <a href="https://calendly.com/novadgsolutions" target="_blank" class="btn btn-outline-light btn-sm mx-1">
+                        <a href="https://calendly.com/samsanmig18/30min" target="_blank" class="btn btn-outline-light btn-sm mx-1">
                             <i class="fas fa-calendar me-2"></i>Book a Call
                         </a>
                     </div>
@@ -737,18 +785,68 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer text-center">
+    <footer class="footer bg-dark text-light py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h5 class="mt-1 mb-0">
-                        <img src="images/favicon.ico" alt="Nova Virtual Solutions Logo" class="logo" height="25"> Nova Virtual Solutions
-                    </h5>
-                    <p class="mb-0">&copy; 2025 Nova Virtual Solutions. All rights reserved.</p>
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/favicon.ico" alt="Nova Virtual Solutions Logo" class="logo me-2" height="30">
+                        <h4 class="mb-0">Nova Virtual Solutions</h4>
+                    </div>
+                    <p class="mb-3">Book Your Discovery Call: Discover how our tailored virtual assistant services can streamline your business operations. From admin tasks to customer support, we help you reclaim time and focus on growth. Book a consultation today and find the perfect remote talent for your needs.</p>
+                </div>
+
+                <!-- Book Consultation Call (Standalone Column) -->
+                <div class="col-lg-3 col-md-6 mb-4 book-column">
+                    <h5 class="mb-3">BOOK A CALL</h5>
+                    <a href="https://calendly.com/samsanmig18/30min" target="_blank" class="btn btn-outline-light w-100 mb-3">
+                        <i class="fas fa-calendar me-2"></i>Book Consultation Call
+                    </a>
+                    <p class="text-white-50 small">Schedule a free 30-min consultation to see how we can help your business.</p>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">CONTACT</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+639-123-4567" class="text-light text-decoration-none">+639-123-4567</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:info@novadgsolutions.com" class="text-light text-decoration-none">info@novadgsolutions.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3">FOLLOW US</h5>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="https://www.linkedin.com/company/novadgsolutions/" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://web.facebook.com/novavirtualsolutions" target="_blank" class="text-light fs-4">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://calendly.com/samsanmig18/30min" target="_blank" class="text-light fs-4">
+                            <i class="fas fa-calendar"></i>
+                        </a>
+                    </div>
+                    <p class="small">Stay connected with us for updates and insights.</p>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="row mt-4 pt-3 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nova Virtual Solutions. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
-    </footer>
+</footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
