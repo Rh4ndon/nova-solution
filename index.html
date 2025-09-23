@@ -426,6 +426,64 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(74, 76, 235, 0.4);
         }
+
+        /* Sam San Miguel Image Styling */
+        .sam-image {
+            width: 150px;
+            height: 180px;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sam-image:hover {
+            transform: scale(1.05);
+        }
+
+        .sam-image-container {
+            display: inline-block;
+        }
+
+        /* Footer Responsive Adjustments */
+        @media (max-width: 768px) {
+            .sam-image {
+                width: 120px;
+                height: 150px;
+            }
+            
+            .footer .text-center {
+                text-align: center !important;
+            }
+        }
+        /* Footer Button Styling */
+        .footer .btn-outline-light {
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer .btn-outline-light:hover {
+            background: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-2px);
+        }
+
+        /* Footer Responsive Adjustments */
+        @media (max-width: 768px) {
+            .sam-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .footer .text-center {
+                text-align: center !important;
+            }
+        }
+
+
+       
     </style>
 </head>
 <body>
@@ -666,7 +724,9 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+
+
+       <!-- Team Section -->
     <section id="team" class="py-5">
         <div class="container">
             <div class="row mb-5">
@@ -677,7 +737,20 @@
             </div>
             
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8" data-aos="zoom-in">
+                <!-- CEO Photo -->
+                <div class="col-lg-6 col-md-6 mb-5" data-aos="fade-right">
+                    <div class="team-image-container text-center">
+                        <img src="images/ceo.jpg" alt="Sam San Miguel - CEO/Co-Founder" class="team-image img-fluid rounded-4 shadow-lg">
+                        <div class="team-overlay">
+                            <h4 class="text-white mb-2">Sam San Miguel</h4>
+                            <p class="mb-2"><strong>CEO / Co-Founder</strong></p>
+                            <p class="text-white-50 small">Leading Nova Virtual Solutions with a vision to bridge global talent with businesses seeking growth through dedicated virtual assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Photo -->
+                <div class="col-lg-6 col-md-6 mb-5" data-aos="fade-left">
                     <div class="team-image-container text-center">
                         <img src="images/team.jpg" alt="Nova Virtual Solutions Team" class="team-image img-fluid rounded-4 shadow-lg">
                         <div class="team-overlay">
@@ -797,14 +870,14 @@
                     <p class="mb-3">Book Your Discovery Call: Discover how our tailored virtual assistant services can streamline your business operations. From admin tasks to customer support, we help you reclaim time and focus on growth. Book a consultation today and find the perfect remote talent for your needs.</p>
                 </div>
 
-                <!-- Book Consultation Call (Standalone Column) -->
-                <div class="col-lg-3 col-md-6 mb-4 book-column">
-                    <h5 class="mb-3">BOOK A CALL</h5>
-                    <a href="https://calendly.com/samsanmig18/30min" target="_blank" class="btn btn-outline-light w-100 mb-3">
-                        <i class="fas fa-calendar me-2"></i>Book Consultation Call
-                    </a>
-                    <p class="text-white-50 small">Schedule a free 30-min consultation to see how we can help your business.</p>
+                <!-- Sam San Miguel Column -->
+            <div class="col-lg-3 col-md-6 mb-4 text-center">
+                <h5 class="mb-3">Sam San Miguel</h5>
+                <div class="sam-image-container mb-3">
+                    <img src="images/ceo.jpg" alt="Sam San Miguel" class="sam-image">
                 </div>
+                <p class="text-white-50 mb-0"><strong>CEO / Co Founder</strong></p>
+            </div>
                 
                 <!-- Contact Info -->
                 <div class="col-lg-2 col-md-6 mb-4">
@@ -846,7 +919,7 @@
                 </div>
             </div>
         </div>
-</footer>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
